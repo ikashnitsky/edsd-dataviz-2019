@@ -1,0 +1,283 @@
+---
+title: "Dataviz with R"
+author: Ilya Kashnitsky
+date: 28 January 2019
+output:
+  revealjs::revealjs_presentation:
+    theme: serif
+    highlight: zenburn
+    center: TRUE
+    transitionSpeed: fast
+    transition: slide
+    incremental: false
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+    self_contained: true
+    fig_width: 10
+    fig_height: 7
+    fig_caption: false
+    smart: true
+    mathjax: null
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  cache = TRUE
+)
+```
+
+
+
+# We are doing the right thing here {data-background=#cce5cc}
+
+## Anscombe's Quartet
+![Imgur](http://i.imgur.com/QA3Ss8D.png)
+
+##
+![dino](http://i.imgur.com/db9eMTL.gif)
+<span style="font-size:0.7em">https://www.autodeskresearch.com/publications/samestats</span>
+
+
+# Outline  {data-background=#ffeb7f}
+
+## Day 1: tydyverse, ggplot2
+
+>- dataviz examples
+>- tidy data
+>- data wrangling `practice`
+>- ggplot2
+>- ggplot2 `practice`
+
+## Day 2: maps in R
+        
+
+
+# Examples of data visualization {data-background=#cce5cc}
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://jschoeley.shinyapps.io/hmdexp"></iframe>
+<span style="font-size:0.7em">https://jschoeley.shinyapps.io/hmdexp</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="http://bancdadesced.uab.es/population_change/"></iframe> 
+<span style="font-size:0.7em">http://bancdadesced.uab.es/population_change/</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="http://www.global-migration.info"></iframe> 
+<span style="font-size:0.7em">http://www.global-migration.info</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io/2018/the-lancet-paper/"></iframe> 
+<span style="font-size:0.7em">https://ikashnitsky.github.io/2018/the-lancet-paper/</span>
+
+
+
+##
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Austria vs Germany ⚽️ The First 111 Years <a href="https://twitter.com/hashtag/AUTGER?src=hash&amp;ref_src=twsrc%5Etfw">#AUTGER</a> international <a href="https://twitter.com/hashtag/football?src=hash&amp;ref_src=twsrc%5Etfw">#football</a> results since 1907: <br>🇦🇹 10 wins<br>🇩🇪 25 wins<br>✖️ 6 draws<a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> by <a href="https://twitter.com/tinafrank?ref_src=twsrc%5Etfw">@tinafrank</a> &amp; <a href="https://twitter.com/metropop_eu?ref_src=twsrc%5Etfw">@metropop_eu</a> <a href="https://t.co/iRjXmpNsOe">pic.twitter.com/iRjXmpNsOe</a></p>&mdash; ramon bauer (@metropop_eu) <a href="https://twitter.com/metropop_eu/status/1003238957499518976?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+##
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Projected number of points in the <a href="https://twitter.com/hashtag/PL?src=hash&amp;ref_src=twsrc%5Etfw">#PL</a> based on current home/away points-per-game. Quite a title race.... <a href="https://t.co/quYiN5VnPW">pic.twitter.com/quYiN5VnPW</a></p>&mdash; Constantinos Chappas (@cchappas) <a href="https://twitter.com/cchappas/status/1076910768711446528?ref_src=twsrc%5Etfw">December 23, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+##
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Remade the <a href="https://twitter.com/WSJ?ref_src=twsrc%5Etfw">@WSJ</a> measles vaccination visualization using ggplot2 and the animation package <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/cnIScD9ymI">pic.twitter.com/cnIScD9ymI</a></p>&mdash; Michael Lee 🚴📊🇷 (@mikeleeco) <a href="https://twitter.com/mikeleeco/status/876792944396730368?ref_src=twsrc%5Etfw">June 19, 2017</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+## More
+>- [Election 2016: Exit Polls](http://www.nytimes.com/interactive/2016/11/08/us/politics/election-exit-polls.html)  
+>- [A Day in the Life of Americans](http://flowingdata.com/2015/12/15/a-day-in-the-life-of-americans)
+>- [Where People Run in Major Cities](http://flowingdata.com/2014/02/05/where-people-run)
+
+
+
+# Tidyverse {data-background=#cefafa} 
+
+## The most influential R developer
+
+## Hadley Wickham
+![hadley](http://i.imgur.com/BHfreww.jpg)
+
+
+## tidyverse
+<iframe width="980px" height="500px" style="background: #FFFFFF;" src="https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/"></iframe>
+<span style="font-size:0.7em">https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/</span>
+
+## 
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://www.tidyverse.org"></iframe>
+<span style="font-size:0.7em">https://www.tidyverse.org/</span>
+
+## tidy data
+Wickham, H. (2014). Tidy Data. *Journal of Statistical Software*, 59(10). Retrieved from http://www.jstatsoft.org/v59/i10
+
+##
+Tidy data is a standard way of mapping the meaning of a dataset to its structure. 
+
+A dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. 
+
+In **tidy data**:
+
+> 1. Each variable forms a column.
+> 2. Each observation forms a row.
+> 3. Each type of observational unit forms a table.
+
+
+# Examples and exercises {data-background=#ffffff}
+
+## Please follow me on the R script `"examples-tidyverse.R"`
+
+
+
+
+
+# Visualizing data with `ggplot2` {data-background=#ffcccc} 
+
+
+# A bit more motivation {data-background=#cce5cc}
+
+
+##
+<iframe width="980px" height="630px" src="http://qz.com/316906/the-dude-map-how-american-men-refer-to-their-bros/"></iframe>
+<span style="font-size:0.7em">http://qz.com/316906/the-dude-map-how-american-men-refer-to-their-bros</span>
+
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://www.granvillematheson.com/post/self-portrait/"></iframe> 
+<span style="font-size:0.7em">https://www.granvillematheson.com/post/self-portrait/</span>
+
+
+##
+<iframe width="980px" height="630px" src="https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying/"></iframe>
+<span style="font-size:0.7em">https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying/</span>
+
+
+##
+<iframe width="980px" height="630px" src="https://barcanumbers.wordpress.com/2018/12/06/who-are-the-best-finishers-in-contemporary-football/"></iframe>
+<span style="font-size:0.7em">https://barcanumbers.wordpress.com/2018/12/06/who-are-the-best-finishers-in-contemporary-football/</span>
+
+
+## More 
+>- [American schools](http://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html)
+>- [Visualizing life tables](http://flowingdata.com/2016/01/19/how-you-will-die)
+
+
+
+        
+# Plotting systems in R? {data-background=#ffcccc} 
+
+##
+>- `base`
+>- `lattice`
+>- <span style="font-size:1.5em; color:green">`ggplot2`</span>
+
+## "The winner takes it all"
+![cat](http://i.imgur.com/zJkOsg6.gif)
+
+
+
+## {data-background="http://i.imgur.com/bObt6rP.png"} 
+
+
+## Strength of `base` plotting system
+>- Usually, `base` knows how to plot an object
+>- Extremely easy to use if you are happy with the default settings
+>- <span style="font-size:1.5em; color:red">BUT</span>
+>- Now `ggplot2` has the `autoplot` function
+
+
+## The only example when `ggplot2` failed for me {data-background=#ffcccc}
+
+<span style="font-size:1.5em">http://stackoverflow.com/questions/17753502</span>
+
+<span style="font-size:1.5em">https://github.com/tidyverse/ggplot2/issues/1720</span>
+
+
+
+
+
+# What makes `ggplot2` special? {data-background=#cefafa}
+
+##
+<span style="font-size:1.5em">"gg" means "Grammar of graphics"</span>
+  
+<iframe width="980px" height="500px"  style="background: #FFFFFF;" src="http://www.springer.com/us/book/9780387245447"></iframe>
+<span style="font-size:0.7em">http://www.springer.com/us/book/9780387245447</span>
+
+
+## Extremely big and helpful community
+>- Help
+>- Examples
+>- Rapid development
+>- Extensions
+
+##
+<iframe width="980px" height="630px"  style="background: #FFFFFF;" src="http://www.ggplot2-exts.org/gallery/"></iframe>
+<span style="font-size:0.7em">http://www.ggplot2-exts.org/gallery/</span>
+
+
+## Amazing documentation
+>- Whenever you have a question on `ggplot2`, the first place to go is 
+>- http://docs.ggplot2.org/current
+
+##
+<iframe width="980px" height="630px"  style="background: #FFFFFF;"
+src="http://docs.ggplot2.org/current/"></iframe>
+<span style="font-size:0.7em">http://docs.ggplot2.org/current</span>
+
+
+
+# `ggplot2` show {data-background=#ffffff}
+
+## Please follow me on "`examples-ggplot2.R`"
+
+
+
+
+# The most powerful and underrated type of plot {data-background=#ffeb7f}
+
+## Dotplot
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="http://www.b-eye-network.com/view/2468"></iframe>
+<span style="font-size:0.7em">http://www.b-eye-network.com/view/2468</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="http://demographer.com/dsitl/08-cleveland-dot-plots/"></iframe>
+<span style="font-size:0.7em">http://demographer.com/dsitl/08-cleveland-dot-plots/</span>
+
+##
+<img width="90%" src="https://habrastorage.org/webt/s5/uz/a8/s5uza83fj2uo30smhzo3roxg4i4.png" />
+<span style="font-size:0.7em">https://link.springer.com/article/10.1007%2Fs10708-018-9953-5#Fig2</span>
+
+## You are welcome to replicate this plot using "`replicate-dotplot-figure.R`"
+
+
+# Further ~~reading~~ coding {data-background=#cce5cc}
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io/2017/data-acquisition-one/"></iframe>
+<span style="font-size:0.7em">https://ikashnitsky.github.io/2017/data-acquisition-one/</span>
+
+
+##
+<iframe width="980px" height="630px"  style="background: #FFFFFF;" src="https://serialmentor.com/dataviz/"></iframe>
+<span style="font-size:0.7em">https://serialmentor.com/dataviz/</span>
+
+
+##
+<iframe width="980px" height="630px"  style="background: #FFFFFF;"  src="http://socviz.co/index.html"></iframe>
+<span style="font-size:0.7em">http://socviz.co/index.html</span>
+
+
+# One last hint  {data-background=#ffcccc} 
+
+##
+<iframe width="980px" height="630px"  style="background: #FFFFFF;" src="https://www.dreamrs.fr"></iframe>
+<span style="font-size:0.7em">https://github.com/dreamRs/esquisse</span>
