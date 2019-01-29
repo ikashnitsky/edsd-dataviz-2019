@@ -1,0 +1,140 @@
+---
+title: "Maps with R"
+author: Ilya Kashnitsky
+date: 29 January 2019
+output:
+  revealjs::revealjs_presentation:
+    theme: serif
+    highlight: zenburn
+    center: TRUE
+    transitionSpeed: fast
+    transition: slide
+    incremental: false
+    reveal_options:
+      slideNumber: true
+      previewLinks: true
+    self_contained: true
+    fig_width: 10
+    fig_height: 7
+    fig_caption: false
+    smart: true
+    mathjax: null
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  warning = FALSE,
+  message = FALSE,
+  cache = TRUE
+)
+```
+
+
+
+# Map projections{data-background=#ffeb7f}
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://xkcd.com/977/"></iframe>
+<span style="font-size:0.7em">https://xkcd.com/977/</span>
+
+##{data-background="http://i.imgur.com/HmwuO7c.png"}
+
+## Projection explained
+<iframe src="https://giphy.com/embed/2hagvtgbTUNuE" width="960" height="540" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/projection-educational-mercator-2hagvtgbTUNuE">via GIPHY</a></p>
+
+## Mercator: Greenland vs Africa
+<iframe src="https://giphy.com/embed/5QNO5BkhaSV7q" width="960" height="540" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/fun-projections-5QNO5BkhaSV7q">via GIPHY</a></p>
+
+
+## New fancy projection (BUCKMINSTER FULLER)
+<iframe src="https://giphy.com/embed/H24eMvRK0Kf96" width="980" height="620" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/buckminster-fuller-H24eMvRK0Kf96">via GIPHY</a></p>
+
+
+##
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">behold, my greatest invention: the Mercator Globe <a href="https://t.co/AcY0XqBMCp">pic.twitter.com/AcY0XqBMCp</a></p>&mdash; 𝑨𝒔𝒉⬩ (@ashastral) <a href="https://twitter.com/ashastral/status/1072313190590103557?ref_src=twsrc%5Etfw">December 11, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="http://epsg.io"></iframe>
+<span style="font-size:0.7em">http://epsg.io</span>
+
+
+
+# Sources of geodata {data-background=#ffcccc} 
+
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://gadm.org/data.html"></iframe>
+<span style="font-size:0.7em">https://gadm.org/data.html</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="http://wiki.openstreetmap.org/wiki/Shapefiles"></iframe>
+<span style="font-size:0.7em">http://wiki.openstreetmap.org/wiki/Shapefiles</span>
+
+## google "download shapefile" =)
+
+
+
+
+
+
+# Where to go next? {data-background=#cefafa}
+
+## Materials
+
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://geocompr.robinlovelace.net"></iframe>
+<span style="font-size:0.7em">https://geocompr.robinlovelace.net</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://bookdown.org"></iframe>
+<span style="font-size:0.7em">https://bookdown.org</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://www.r-bloggers.com"></iframe>
+<span style="font-size:0.7em">https://www.r-bloggers.com</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io"></iframe>
+<span style="font-size:0.7em">https://ikashnitsky.github.io</span>
+
+
+
+# Packages to explore {data-background=#cce5cc}
+
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html"></iframe>
+<span style="font-size:0.7em">https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://r-spatial.github.io/sf"></iframe>
+<span style="font-size:0.7em">https://r-spatial.github.io/sf</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://walkerke.github.io/tidycensus/articles/basic-usage.html"></iframe>
+<span style="font-size:0.7em">https://walkerke.github.io/tidycensus/articles/basic-usage.html</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://bhaskarvk.github.io/tilegramsR/"></iframe>
+<span style="font-size:0.7em">https://bhaskarvk.github.io/tilegramsR/</span>
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/voteogram/vignettes/intro_to_voteogram.html"></iframe>
+<span style="font-size:0.7em">https://cran.r-project.org/web/packages/voteogram/vignettes/intro_to_voteogram.html</span>
+
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://cran.rstudio.com/web/packages/parlitools/vignettes/using-cartograms.html"></iframe>
+<span style="font-size:0.7em">https://cran.rstudio.com/web/packages/parlitools/vignettes/using-cartograms.html</span>
+
+
+##
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://xinye1.github.io/projects/brexit-cartogram-leaflet/"></iframe>
+<span style="font-size:0.7em">https://xinye1.github.io/projects/brexit-cartogram-leaflet/</span>
+
